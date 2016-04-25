@@ -1,0 +1,16 @@
+{
+    "contents" : "Next Word Prediction - Capstone Project\n========================================================\nauthor:Bipika Amatya \ndate: 2016-04-12\n\nIntroduction\n========================================================\n\nThe objective of the App is implementing a predictive model that offers hints to one or more words, coherent to the sentence that’s been input by its user. The Capstone dataset used includes twitter, news and blogs from HC Corpora. After performing data cleansing, sampling and sub-setting, we gather all data in R data frames. Applying some Text Mining (TM) and NLP techniques, is created some set of word combinations (N-grams). These are the main support to Katz Backoff algorithm predicts the next word. Some adaptations and heuristics were specially developed to enhance this Shiny application.\n\nBuild Prediction Model\n========================================================\n\nThis project is to create a shiny App to predict next word based on previous input, using n-grams models, which are built in following steps:\n\n- Read millions lines content from news, blogs and tweets\n- Break each source into sentences\n- Removed special characters, numbers, punctuation and profanity\n- Built basic 4-gram model for predicting next word based on the previous 1, 2, or 3 words\n- Split off last word from each n-gram as Next-Word\n\n\nHow the app works\n========================================================\n\n- Go to the shinyapp [https://bipika.shinyapps.io/capstoneshiny/].\n- Type any word in the given textbox.\n- There is an existing text as well. \"Give it a\".\n- Above the textbox are the 3 predicted words.\n- Press \"Predict\" button to predict the next one.\n\nFurther Details:\n========================================================\n\n- ShinyApp (https://bipika.shinyapps.io/capstoneshiny/)\n- Github (https://github.com/krispyqueen/Capstone/tree/master/SHINY)\n",
+    "created" : 1461585438475.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1168510254",
+    "id" : "36C0A087",
+    "lastKnownWriteTime" : 1461586881,
+    "path" : "D:/Desktop/New folder/FINAL/Present.Rpres",
+    "project_path" : null,
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_presentation"
+}
