@@ -1,4 +1,4 @@
-The prediction algorithm uses a table (an R 'data.table') of 4grams with frequencies of occurrence. (In Natural Linguistic Processing, a 4gram is a string of 4 words.) The simple explanation is that we look at the last three words of the input, search for a 4gram that begins with those three words in order, and return the 4th word. The actual algorithm has some additional features:
+In Natural Linguistic Processing, a 4gram is a string of 4 words. The prediction algorithm uses a table (an R 'data.table') of 4-grams with frequencies of occurrence. The simple explanation is that we look at the last three words of the input, search for a 4gram that begins with those three words in order, and return the 4th word. The actual algorithm has some additional features:
 
 - The data.table has a column for each of the four words in the 4gram (w1, w2, w3, & w4), so we can compare the input phrase (just the last 3 words, actually) to any combination of the words in the table. Here's how we do that:
 
@@ -13,9 +13,9 @@ The prediction algorithm uses a table (an R 'data.table') of 4grams with frequen
 
 One non-ideal situation is when no result is predicted (or less than three results). In this case, we just replace the 'NA' result with the three most common words in English: "the", "be", "to".
 
-The 'babble' function simply repeats the algorithm automatically. By default, it chooses the most probable of three choices, but the user can set it to choose randomly from one the top three results.
+The 'predict' function simply repeats the algorithm automatically. By default, it chooses the most probable of three choices, but the user can set it to choose randomly from one the top three results.
 
-When the babble function runs into a non-prediction (NA) it returns randomly one of the six most common English words: "the", "be", "to", "of", "and", "a". Again, that is not ideal and sometimes results in grammatically incorrect phrases. One disadvantage of choosing from the top three results is an increased chance of getting a non-prediction and thus one those six words. The disadvantage of exclusively choosing the top result is an increased chance of forming an infinitely repeating phrase.
+When the predict function runs into a non-prediction (NA) it returns randomly one of the six most common English words: "the", "be", "to", "of", "and", "a". Again, that is not ideal and sometimes results in grammatically incorrect phrases. One disadvantage of choosing from the top three results is an increased chance of getting a non-prediction and thus one those six words. The disadvantage of exclusively choosing the top result is an increased chance of forming an infinitely repeating phrase.
 
 The obvious way to reduce the occurence of non-predictions is to include more data, which requires more disk space, and also increases the app's response time.
 
@@ -25,6 +25,6 @@ The obvious way to reduce the occurence of non-predictions is to include more da
 - Create a second table of word-pair associations. That is, words that might often appear in the same paragraph but not within 3 words of each other.
 
 The code for the app is in two files 'server.R' and 'ui.R'.
-[See the code at github.](https://github.com/stephenfranklin/nlp-word-prediction/tree/master/word-predict)
+[See the code at github.](https://github.com/krispyqueen/Capstone/tree/master/SHINY/predict)
 
 

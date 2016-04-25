@@ -1,0 +1,16 @@
+{
+    "contents" : "shinyUI(fluidPage(\n    titlePanel(\"Word Prediction\"),\n    mainPanel(\n        width=6\n        ,uiOutput(\"topPanel\")\n        ,p()\n        ,tags$textarea(id=\"text1\", rows=6, cols=80, \"Give it a \")\n        ,p()\n        ,uiOutput(\"bottomPanel\")\n        ,p()\n        ,selectInput(\"rand_bab\", \"Top prediction only:\",\n                    choices = c(TRUE, FALSE))\n        ,numericInput(inputId=\"num_bab\", label=\"Number of words to predict:\",\n                      value=4,min=1,max=100)\n        \n    ),\n    sidebarPanel(\n        width=6\n        ,tabsetPanel(id = \"explanation\", position=\"above\"\n            ,tabPanel(\"Prediction\", includeMarkdown(\"prediction.Rmd\"))\n            ,tabPanel(\"Processing the Data\", includeMarkdown(\"processing.Rmd\"))\n        )\n    )\n))",
+    "created" : 1461575713594.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3574526170",
+    "id" : "8A3D951",
+    "lastKnownWriteTime" : 1461575769,
+    "path" : "D:/Desktop/New folder/FINAL/SHINY/predict/ui.R",
+    "project_path" : "predict/ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

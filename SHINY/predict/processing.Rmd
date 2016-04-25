@@ -1,4 +1,4 @@
-The table of 4grams and their frequencies was processed from a corpora of written English text using an R script (including some BASH commands). It took 166 minutes to process without multithreading on an Amazon EC2 r3.xlarge, and the process used about 15 GB of RAM.
+The table of 4-grams and their frequencies was processed from a corpora of written English text using an R script and BASH commands. 
 
 Some details about the data:
 
@@ -11,7 +11,7 @@ Some details about the data:
     - data.table is only 6.1 MB
     - Consisting of 334 thousand unique 4grams.
 
-The processing was done with R and some BASH commands.  
+The processing was done with R and BASH commands.  
 
-[obtain_corpus.R](https://github.com/stephenfranklin/nlp-word-prediction/blob/master/obtain_corpus.R)  
-[process_4grams.R](https://github.com/stephenfranklin/nlp-word-prediction/blob/master/process_4grams.R)
+[obtain_corpus.R](https://github.com/krispyqueen/Capstone/blob/master/SHINY/corpus.R)  
+[process_4grams.R](https://github.com/krispyqueen/Capstone/blob/master/SHINY/four_grams_process.R)
